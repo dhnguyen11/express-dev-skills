@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Skill</title>
+</head>
+<body>
+    <h1>Edit Skill</h1>
+    <form action="/skills/<%= skill.id %>?_method=PUT" method="POST" autocomplete="off">
+        <p>Skill</p>
+        <input type="text" name="skill" value="<%= skill.skill %>">
+        <p>Months Practicing</p>
+        <input type="text" name="months" value="<%= skill.months %>">
+        <p>First Learned At: </p>
+        <input type="text" name="learned" value="<%= skill.learned %>">
+        <br>
+        <button type="submit">Save Skill</button>
+    </form>
+</body>
+</html>
